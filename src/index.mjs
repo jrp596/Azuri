@@ -39,8 +39,7 @@ client.on("ready", async () => {
   var activityMessage = process.env.STATUS_MESSAGE.replace("{prefix}", prefix);
   var activityType = process.env.ACTIVITY_TYPE;
   var statusType = process.env.STATUS_TYPE;
-  client.user.setActivity(activityMessage, { type: activityType });
-  if (statusType) client.user.setStatus(statusType);
+  client.user.setActivity(`Stream to ${${client.guilds.cache.size}} servers`, { type: "PLAYING" });
 
   let guildData = GuildUtils.loadGuildData();
 
