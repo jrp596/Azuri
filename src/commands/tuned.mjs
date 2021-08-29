@@ -10,11 +10,8 @@ export default {
     if (!message.guild)
       return message.channel.send(L._U(guildData.locale, "server_only"));
 
-    if (!guildData.api)
-      return message.channel.send(L._U(guildData.locale, "no_radio_api"));
-
     axios
-      .get(guildData.api)
+      .get("https://stream.micmusicradio.be/api/nowplaying_static/micmusicradio.json")
       .then((res) => {
         message.channel.send(
           `${L._U(guildData.locale, "currently")} **${
