@@ -41,9 +41,13 @@ export default {
         const connection = dv.getVoiceConnection(channel.guild.id);
         player = dv.createAudioPlayer();
         dispatcher = connection.subscribe(player);
+        radioURL = "https://stream.micmusicradio.be/radio/8000/radio.mp3";
+        if (channel.guild.id = "878328533393498213") radioURL = "878328533393498213";
         const resource = dv.createAudioResource(radioURL);
         player.play(resource);
         player.on(dv.AudioPlayerStatus.Idle, () => {
+         radioURL = "https://stream.micmusicradio.be/radio/8000/radio.mp3";
+        if (channel.guild.id = "878328533393498213") radioURL = "878328533393498213";
           const newResource = dv.createAudioResource(radioURL);
           player.play(newResource);
         });
@@ -112,9 +116,13 @@ export default {
       const connection = dv.getVoiceConnection(message.guild.id);
       player = dv.createAudioPlayer();
       connection.subscribe(player);
+              radioURL = "https://stream.micmusicradio.be/radio/8000/radio.mp3";
+        if (channel.guild.id = "878328533393498213") radioURL = "878328533393498213";
       const resource = dv.createAudioResource(radioURL);
       player.play(resource);
       player.on(dv.AudioPlayerStatus.Idle, () => {
+                radioURL = "https://stream.micmusicradio.be/radio/8000/radio.mp3";
+        if (channel.guild.id = "878328533393498213") radioURL = "878328533393498213";
         const newResource = dv.createAudioResource(radioURL);
         player.play(newResource);
       });
