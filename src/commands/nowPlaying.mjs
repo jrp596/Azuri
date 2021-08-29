@@ -11,13 +11,8 @@ export default {
     if (!message.guild)
       return message.channel.send(L._U(guildData.locale, "server_only"));
 
-    if (!guildData.url)
-      return message.channel.send(L._U(guildData.locale, "no_radio_api"));
-    if (!guildData.api)
-      return message.channel.send(L._U(guildData.locale, "no_radio_api"));
-
     axios
-      .get(guildData.api)
+      .get('https://stream.micmusicradio.be/api/nowplaying_static/micmusicradio.json')
       .then((res) => {
         const nowPlayingEmbed = new Discord.MessageEmbed()
           .setColor("#1f8df5")
