@@ -24,6 +24,7 @@ export default {
             adapterCreator: channel.guild.voiceAdapterCreator,
           });
       } catch (e) {
+        console.log(e)
         try {
           return message.channel.send(L._U(guildData.locale, "no_join"));
         } catch (e) {
