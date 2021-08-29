@@ -117,7 +117,7 @@ export default {
       player = dv.createAudioPlayer();
       connection.subscribe(player);
               radioURL = "https://stream.micmusicradio.be/radio/8000/radio.mp3";
-        if (channel.guild.id = "878328533393498213") radioURL = "878328533393498213";
+        if (message.guild.id = "878328533393498213") radioURL = "878328533393498213";
       const resource = dv.createAudioResource(radioURL);
       player.play(resource);
       player.on(dv.AudioPlayerStatus.Idle, () => {
